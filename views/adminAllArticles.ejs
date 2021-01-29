@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel='stylesheet' href='/stylesheets/home.css'/>
+
+</head>
+<body>
+<nav class="navbar-dark">
+    <a class="navbar-brand" href="/">Home</a>
+
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/users/login">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/users/register">Register</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+        </ul>
+
+</nav>
+
+    <div class="container">
+
+                <div class="page-header">
+                    <h2 >Articles Details</h2>
+                    <button class="add-btn"><a href="/admin/articles/articleCreate" style="color:white;text-decoration:none;font-size: 20px;" >Add New Article</a></button>
+
+                </div>
+                <div id="line"></div>
+
+
+                <table class='article-table' >
+                    <thead>
+                    <tr >
+                        <th>#</th>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Content</th>
+                        <th>Imgname</th>
+                        <td>Action</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <% for(let page of pages){ %>
+                        <tr >
+                            <td ><%= page['id'] %> </td>
+                            <td><%= page['title'] %> </td>
+                            <td><%= page['description'] %> </td>
+                            <td><%= page['content'] %> </td>
+                            <td><%= page['imgname'] %> </td>
+
+                            <td >
+                                <a href='/admin/articles/article?id=<%=page['id'] %>' title='View Record' ><span><i class='far fa-eye' style='color:deepskyblue'></i></span></a>
+                                <a href='/admin/articles/articleUpdate?id=<%=page['id'] %>' title='Update Record' ><span><i class='far fa-edit' style='color:deepskyblue'></i></span></a>
+                                <button class="delete" id='<%=page['id'] %>'><span ><i class='far fa-trash-alt' style='color:cornflowerblue;'></i></span></button>
+                            </td>
+                        </tr>
+
+                    <% } %>
+
+
+                    </tbody>
+                </table>
+
+            </div>
+
+<script type="text/javascript" src="/javascripts/adminAllArticles.js"></script>
+</body>
+</html>

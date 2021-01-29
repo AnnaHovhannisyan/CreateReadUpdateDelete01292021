@@ -1,0 +1,6 @@
+#ignore
+*.env
+#ignore
+/config
+#ignore
+/node_modules

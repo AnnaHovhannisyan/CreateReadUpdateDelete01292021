@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+</head>
+<body>
+<div class="container">
+
+    <% if(message){ %>
+    <h1 class="reg">     <%= message %></h1>
+        <% } %>
+
+
+        <form action="/users/register" method="post" class="register">
+
+            <div>
+                <label>Email</label>
+                <p><input type="text" name="email" class="form-control" value=""></p>
+                <span class="help-block"></span>
+            </div>
+            <div>
+                <label>Password</label>
+                <p><input type="password" name="password" class="form-control" value=""></p>
+                <span class="help-block"></span>
+            </div>
+
+
+            <div >
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+            <p>Already have an account? <a href="/users/login">Login here</a>.</p>
+        </form>
+
+</div>
+</body>
+</html>
