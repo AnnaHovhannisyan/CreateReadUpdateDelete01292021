@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Dashboard</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link rel='stylesheet' href='/stylesheets/home.css' />
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
 
@@ -32,15 +31,18 @@
     <div class="article">
 <form action="/admin/articles/articleUpdate" enctype="multipart/form-data" method="post">
     <p>
-        Title<input type="text" name="title" value="<%= page.title %>">
+        <label for="updTitle">Title</label>
+        <input type="text" name="title" value="<%= page.title %>" id="updTitle">
     </p>
     <p>
-        Description<input type="text" name="description" value="<%= page.description %>">
+        <label for="updDescription">Description</label>
+       <input type="text" name="description" value="<%= page.description %>">
     </p>
 
 
     <p>
-      <textarea name="content" placeholder="text"   rows="5">
+        <label for="updText"></label>
+      <textarea name="content" placeholder="text" id="updText"  rows="5">
         <%= page.content %>
       </textarea>
     </p>

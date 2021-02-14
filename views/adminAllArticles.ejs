@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Dashboard</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel='stylesheet' href='/stylesheets/home.css'/>
 
 </head>
@@ -58,9 +58,9 @@
                             <td><%= page['imgname'] %> </td>
 
                             <td >
-                                <a href='/admin/articles/article?id=<%=page['id'] %>' title='View Record' ><span><i class='far fa-eye' style='color:deepskyblue'></i></span></a>
-                                <a href='/admin/articles/articleUpdate?id=<%=page['id'] %>' title='Update Record' ><span><i class='far fa-edit' style='color:deepskyblue'></i></span></a>
-                                <button class="delete" id='<%=page['id'] %>'><span ><i class='far fa-trash-alt' style='color:cornflowerblue;'></i></span></button>
+                                <a href='/admin/articles/article?id=<%=page['id'] %>' title='View Record' ><span><i class='fa fa-eye' style='color:deepskyblue'></i></span></a>
+                                <a href='/admin/articles/articleUpdate?id=<%=page['id'] %>' title='Update Record' ><span><i class='fa fa-edit' style='color:deepskyblue'></i></span></a>
+                                <button class="delete" id='<%=page['id'] %>'><span ><i class='fa fa-trash' style='color:cornflowerblue;'></i></span></button>
                             </td>
                         </tr>
 
