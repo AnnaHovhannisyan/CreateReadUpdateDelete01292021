@@ -4,3 +4,4 @@
 /config
 #ignore
 /node_modules
+/.idea
